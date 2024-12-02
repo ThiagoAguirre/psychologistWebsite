@@ -12,13 +12,12 @@ body, html {
     justify-content: space-around;
     align-items: center;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(40, 88, 211, 0.17);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     height: 70px; /* Adicione a altura fixa para o cabeçalho */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Para ajustar o conteúdo abaixo do cabeçalho */
@@ -108,19 +107,36 @@ body, html {
     margin-bottom: 15px;
 }
 
-.service-box p {
+/* .service-box p {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
     color: #fff;
-    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; 
+    max-height: calc(1.5em * 3); 
+    word-break: break-word;
+    transition: max-height 0.5s ease; 
+} */
+.more-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Limitar o texto a 3 linhas */
+    transition: max-height 0.5s ease; /* Transição suave */
+    max-height: calc(1.5em * 3); /* Altura para 3 linhas */
+    word-break: break-word;
+}
+.service-box p {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3; /* Limita o texto a 3 linhas */
-    max-height: calc(1.5em * 3); /* Altura para 3 linhas com base no tamanho da fonte */
-    word-break: break-word;
     transition: max-height 0.5s ease; /* Animação para expansão */
 }
 

@@ -26,22 +26,24 @@
             <div class="service-container">
                 <div class="service-box">
                     <h3>Psicoterapia Individual</h3>
-                    <p>A terapia individual é um espaço seguro onde você pode explorar suas emoções, pensamentos e comportamentos. Utilizo abordagem fenomenológica-existencial...</p>
-                    <button class="button">Saiba mais</button>
+                    <p class="more-text">A terapia individual é um espaço seguro onde você pode explorar suas emoções, pensamentos e comportamentos. Utilizo abordagem fenomenológica-existencial para pensar com você seus medos, anseios, autoestima, tristezas, luto, ansiedades, medos, questões relacionadas a trabalho, traumas, relações familiares, amorosas,  alegrias e outras infinidades de questões que compõem a nossa experiência. 
+
+                        Nesta prática atendo adolescentes, adultos e idosos, reconhecendo as particularidades de cada fase da vida. Cada atendimento é personalizado, visando promover o bem-estar e o autoconhecimento, respeitando as especificidades de cada faixa etária.
+                        </p>
+                    <button class="toggle-button">Saiba mais</button>
                 </div>
                 <div class="service-box">
                     <h3>Atendimento Online</h3>
-                    <p>Atendimentos online para sua maior comodidade, com foco em oferecer o mesmo acolhimento e privacidade das sessões presenciais.</p>
-                    <button class="button">Saiba mais</button>
+                    <p class="more-text">Atendimentos online para sua maior comodidade, com foco em oferecer o mesmo acolhimento e privacidade das sessões presenciais.</p>
+                    <button class="toggle-button">Saiba mais</button>
                 </div>
                 <div class="service-box">
                     <h3>Conforto no seu lar</h3>
-                    <p>Sessões no consultório para um contato mais próximo ou no conforto do seu lar.</p>
-                    <button class="button">Saiba mais</button>
+                    <p class="more-text">Sessões no consultório para um contato mais próximo ou no conforto do seu lar.</p>
+                    <button class="toggle-button">Saiba mais</button>
                 </div>
             </div>
         </div>
-             
     </section>
 
     <section class="aboutMe">
@@ -50,8 +52,8 @@
             <h3>Bruna de Oliveira Aguirre</h3>
             <p>CRP -</p>
             <ul>
-                <li>Psicologa formada na PUC-SP</li>
-                <li>Experiencia em psicologia clínica</li>
+                <li>Psicóloga formada na PUC-SP</li>
+                <li>Experiência em psicologia clínica</li>
             </ul>
         </div>
         <div class="sobreMimImage">
@@ -62,5 +64,30 @@
     <footer class="footer">
         <p>&copy; 2024 Psicóloga Bruna Aguirre. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.toggle-button').on('click', function () {
+                const button = $(this);
+                const content = button.siblings('.more-text');
+
+                // Verificar o estado atual e alternar
+                if (content.css('-webkit-line-clamp') === '3' || content.css('max-height') === 'calc(1.5em * 3)') {
+                    content.css({
+                        '-webkit-line-clamp': 'unset',
+                        'max-height': 'none'
+                    });
+                    button.text('Saiba menos');
+                } else {
+                    content.css({
+                        '-webkit-line-clamp': '3',
+                        'max-height': 'calc(1.5em * 3)'
+                    });
+                    button.text('Saiba mais');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
