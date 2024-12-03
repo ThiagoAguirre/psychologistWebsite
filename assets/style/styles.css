@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Niconne&family=Sixtyfour+Convergence&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Niconne&family=Sixtyfour+Convergence&display=swap');
 /* Estilo geral */
 body, html {
     margin: 0;
@@ -12,21 +14,27 @@ body, html {
     justify-content: space-around;
     align-items: center;
     padding: 10px;
-    background-color: rgba(40, 88, 211, 0.17);
+    background-color: whitesmoke;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    height: 70px; /* Adicione a altura fixa para o cabeçalho */
+    height: 70px; 
 }
-
-/* Para ajustar o conteúdo abaixo do cabeçalho */
 
 .header .logo {
     font-size: 24px;
     font-weight: bold;
+    
 }
-
+.logo a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Niconne", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
 .nav-links {
     list-style: none;
     display: flex;
@@ -36,7 +44,7 @@ body, html {
 }
 
 .nav-links li a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     font-weight: bold;
 }
@@ -44,7 +52,7 @@ body, html {
 /* Seção hero */
 .hero {
     height: 100vh;
-    background: url('../img/back.jpg') no-repeat center center/cover;
+    background: url('../img/BackGroundBruna.jpeg') no-repeat center center/cover;
     position: relative;
 }
 
@@ -68,7 +76,7 @@ body, html {
 }
 
 .hero p {
-    font-size: 24px;
+    font-size: 16px;
     margin-bottom: 30px;
 }
 
@@ -84,7 +92,7 @@ body, html {
 
 .service-container {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     flex-wrap: wrap; /* Para responsividade */
 }
 
@@ -92,7 +100,7 @@ body, html {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
-    max-width: 300px;
+    max-width: 500px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -104,23 +112,9 @@ body, html {
 
 .service-box h3 {
     font-size: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-/* .service-box p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    color: #fff;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3; 
-    max-height: calc(1.5em * 3); 
-    word-break: break-word;
-    transition: max-height 0.5s ease; 
-} */
 .more-text {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -138,19 +132,21 @@ body, html {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3; /* Limita o texto a 3 linhas */
     transition: max-height 0.5s ease; /* Animação para expansão */
+    word-break: break-word;
+    text-align: center;
 }
 
-.service-box .button {
-    background-color: #6C63FF;
-    border: none;
+.service-box button {
+    background-color: #f5f5f500;
+    border: 1px white solid;
     padding: 10px 20px;
     color: white;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.service-box .button:hover {
-    background-color: #5753d4;
+.service-box button:hover {
+    background-color: #ffffff4c;
 } 
 
 /* Conteúdo */
@@ -173,17 +169,43 @@ body, html {
 /* Bruna sobre mim*/
 .aboutMe{
     display: flex;
-    padding: 50px 20px;
-    background: whitesmoke;
+    padding: 50px 80px;
+    background: #F2E7DD;
+}
+.aboutMe-container{
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 .sobreMim{
     width: 50%;
     color: black;   
+    margin: 0px 0px 0px 100px;
+}
+.sobreMim h2{
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    text-align: justify;
+}
+.aboutmeContainer{
+    width: 500px;
+}
+
+.aboutmeContainer h3, p {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: oblique;
+    font-size: 18px;
 }
 
 .sobreMimImage img{
     width: 570px;
     height: 550px;
+    border-radius: 19%;
 }
 
 .button {
