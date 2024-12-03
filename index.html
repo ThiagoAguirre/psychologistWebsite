@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./assets/style/styles.css">
 </head>
 <body>
-    <a href="https://api.whatsapp.com/send?phone=5511970563044&text=olá teste" class="whatsapp-button" target="_blank" style="position: fixed;  right: 15px; bottom: 15px;">
+    <a href="https://api.whatsapp.com/send?phone=5511970563044&text=olá teste"  target="_blank" style="position: fixed;  right: 15px; bottom: 15px;">
         <img src="https://i.ibb.co/VgSspjY/whatsapp-button.png" alt="botão whatsapp">
       </a>
     <header class="header">
@@ -56,12 +56,13 @@
                     <p>Sou psicóloga clínica graduada pela PUC-SP, com sólida formação e experiência na área clínica. Minha abordagem terapêutica é fundamentada na fenomenologia existencial, que busca compreender a experiência subjetiva do paciente e as questões existenciais que impactam seu bem-estar. A psicoterapia é um processo de autoconhecimento e transformação, onde o foco está na experiência única de cada pessoa.</p>
                     <p>Na minha abordagem fenomenológica existencial, busco entender como cada indivíduo percebe e dá significado à sua vida. Juntos, criamos um espaço acolhedor e seguro para ajudá-lo a descobrir suas palavras e compreender sua própria realidade. Aqui, você terá a oportunidade de se entender melhor, explorar o significado das experiências em sua vida e procurar sentido na sua vivência.</p>
                 </div>
-                <div class="whatsapp-button">
+                <button class="whatsapp-button">
                     <a href="https://wa.me/5511976557528" target="_blank" >
-                        Agende um Horario
+                        Agende um Horário
                     </a>
+                    <img src="assets/img/whatsappIcon.png" alt="Icon">
             
-                </div>
+                </button>
             </div>
             <div class="sobreMimImage">
                 <img src="assets/img/brunaAboutMe.jpeg" alt="Bruna-Image">
@@ -72,8 +73,36 @@
     </section>
     
 
-    <footer class="footer">
+    <!-- <footer class="footer">
         <p>&copy; 2024 Psicóloga Bruna Aguirre. Todos os direitos reservados.</p>
+    </footer> -->
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>Psicoterapia</h2>
+                <p>Atendimento psicológico para todas as idades.</p>
+                <div class="social-icons">
+                    <a href="href="https://api.whatsapp.com/send?phone=5511970563044&text=olá teste"  target="_blank"" class="icon"><img src="assets/img/whatsappIcon.png" alt="icon"></a>
+
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Serviços</h3>
+                <p>+55 11 91234-5678</p>
+                <p><a href="mailto:contato@brunaaguirre.com">contato@brunaaguirre.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <form action="#" method="POST">
+                    <input type="email" name="email" placeholder="seuemail@exemplo.com" required>
+                    <button type="submit">Agende sua consulta agora</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
