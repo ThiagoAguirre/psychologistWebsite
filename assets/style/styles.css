@@ -36,7 +36,8 @@ body, html {
     color: #000000;
     text-decoration: none;
     font-weight: bold;
-    font-family: "Niconne", cursive;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
@@ -125,21 +126,25 @@ body, html {
 }
 
 .more-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3; /* Limitar o texto a 3 linhas */
-    transition: max-height 0.5s ease; /* Transição suave */
-    max-height: calc(1.5em * 3); /* Altura para 3 linhas */
-    word-break: break-word;
+    overflow: hidden; /* Ocultar o conteúdo que ultrapassa o limite */
+    text-overflow: ellipsis; /* Adicionar "..." no final do texto cortado */
+    display: -webkit-box; /* Necessário para suporte ao WebKit */
+    -webkit-box-orient: vertical; /* Orientação vertical das linhas */
+    -webkit-line-clamp: 3; /* Limitar o texto a 3 linhas no WebKit */
+    line-clamp: 3; /* Propriedade padrão para navegadores modernos */
+    transition: max-height 0.5s ease; /* Animação para alterações de altura */
+    max-height: calc(1.5em * 3); /* Altura correspondente a 3 linhas */
+    word-break: break-word; /* Quebrar palavras longas */
 }
 .service-box p {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3; /* Limita o texto a 3 linhas */
+    line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
     transition: max-height 0.5s ease; /* Animação para expansão */
     word-break: break-word;
     text-align: center;
@@ -353,7 +358,7 @@ body, html {
     height: 20px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .service-container {
         display: flex;
         gap: 40px;
@@ -382,7 +387,7 @@ body, html {
     }
   }
   
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .service-container {
         display: flex;
         gap: 40px;
@@ -399,8 +404,7 @@ body, html {
         width: 50%;
         /* color: black; */
         margin: 0px 0px 0px 0px;
-        display: flex
-;
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
@@ -419,7 +423,7 @@ body, html {
 
 }
 
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .header {
         flex-direction: column;
         padding: 5px;
@@ -499,5 +503,21 @@ body, html {
         flex-direction: column;
         align-items: center;
     }
+    .hero {
 
+        background: url('../img/BrunaAguirre.jpeg') no-repeat center center/cover;
+
+    }
+    .footer-container p{
+        text-align: center;
+    }
+    .footer-bottom p{
+        text-align: center;
+    }
+
+    .footer-section p{
+        text-align: center;
+    }
+        
+        
 }

@@ -37,9 +37,7 @@
                 </div>
                 <div class="service-box">
                     <h3>Atendimento Online e Presencial</h3>
-                    <p class="more-text">Atualmente, ofereço sessões de terapia online, proporcionando conveniência e acessibilidade para quem busca apoio. O atendimento virtual permite que você participe de consultas de qualquer lugar, no conforto da sua casa, sem a necessidade de deslocamentos. 
-
-                        As sessões online seguem a mesma estrutura e ética do atendimento presencial, garantindo um espaço seguro e acolhedor para a exploração de suas questões pessoais.
+                    <p class="more-text">Ofereço sessões de terapia que se adaptam às suas necessidades e à sua rotina, tanto no formato online quanto presencial. No atendimento online, você pode participar das consultas de qualquer lugar, com conforto e privacidade, eliminando a necessidade de deslocamentos. Já o atendimento presencial é realizado na região oeste de São Paulo, abrangendo bairros como Vila Madalena, Faria Lima, Paulista e Pinheiros, em um ambiente acolhedor e preparado para garantir seu bem-estar.
                         </p>
                     <button class="toggle-button">Saiba mais</button>
                 </div>
@@ -83,7 +81,7 @@
             <div class="footer-section">
                 <h2>Psicoterapia</h2>
                 <div class="footer-container">
-                    <p>Atendimento psicológico.</p>
+                    <p>Atendimentos Online e presencial.</p>
                 </div>
             </div>
             <div class="footer-section">
@@ -105,28 +103,7 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.toggle-button').on('click', function () {
-                const button = $(this);
-                const content = button.siblings('.more-text');
+    <script src="./assets/scripts/main.js"></script>
 
-                // Verificar o estado atual e alternar
-                if (content.css('-webkit-line-clamp') === '3' || content.css('max-height') === 'calc(1.5em * 3)') {
-                    content.css({
-                        '-webkit-line-clamp': 'unset',
-                        'max-height': 'none'
-                    });
-                    button.text('Saiba menos');
-                } else {
-                    content.css({
-                        '-webkit-line-clamp': '3',
-                        'max-height': 'calc(1.5em * 3)'
-                    });
-                    button.text('Saiba mais');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
