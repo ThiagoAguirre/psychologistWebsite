@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Niconne&family=Sixtyfour+Convergence&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Niconne&family=Sixtyfour+Convergence&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 /* Estilo geral */
 body, html {
     margin: 0;
@@ -10,8 +11,6 @@ body, html {
 
 :root {
     --principal-cor: #F2E7DD;
-    --cor-secundaria: #2ecc71;
-    --fonte-padrao: 'Ubuntu', sans-serif;
   }
 /* Cabeçalho */
 .header {
@@ -79,6 +78,10 @@ body, html {
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
 }
 
 .hero p {
@@ -140,6 +143,7 @@ body, html {
     transition: max-height 0.5s ease; /* Animação para expansão */
     word-break: break-word;
     text-align: center;
+    text-align: justify;
 }
 
 .service-box button {
@@ -204,9 +208,10 @@ body, html {
 .aboutmeContainer h3, p {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-style: oblique;
+    font-style: normal;
     font-size: 18px;
     text-align: justify;
+    word-break: break-word;
 }
 
 .sobreMimImage img{
@@ -342,4 +347,157 @@ body, html {
     text-align: center;
     font-size: 0.9em;
     opacity: 0.8;
+}
+.footer-container a img{
+    width: 20px;
+    height: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .service-container {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+    }
+    .sobreMim {
+        width: 50%;
+        color: black;
+        margin: 0px 0px 0px 80px;
+    }
+    .sobreMimImage img {
+        width: 370px;
+        height: 350px;
+        border-radius: 50%;
+    }
+    .service-box {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 350px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hero{
+        height: 150vh;
+    }
+  }
+  
+@media only screen and (max-width: 900px) {
+    .service-container {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .aboutMe-container {
+        display: flex;
+        gap: 80px;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .sobreMim {
+        width: 50%;
+        /* color: black; */
+        margin: 0px 0px 0px 0px;
+        display: flex
+;
+        flex-direction: column;
+        align-items: center;
+    }
+    .aboutmeContainer {
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero{
+        height: 150vh;
+    }
+    .service-box {
+        width: 400px;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        padding: 5px;
+        height: auto;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .service-box {
+        padding: 10px;
+    }
+
+    .aboutMe-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sobreMim {
+        text-align: center;
+        margin: 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+    .aboutMe-container {
+        display: flex;
+        gap: 80px;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .sobreMim {
+        width: 50%;
+        margin: 0px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sobreMimImage img {
+        width: 270px;
+        height: 250px;
+        border-radius: 50%;
+    }
+    .aboutmeContainer h3, p {
+        width: 250px;
+    }
+    .service-box {
+        width: 250px;
+    }
+    .aboutmeContainer {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .aboutmeContainer {
+        width: 250px;
+        display: flex
+;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
