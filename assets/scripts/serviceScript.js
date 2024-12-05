@@ -1,15 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const serviceItems = document.querySelectorAll('.service-item');
+const toggleButton = document.getElementsByClassName('toggle-button')[0];
+const navbarLinks = document.getElementsByClassName('navbar-links')[0];
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, {
-        threshold: 0.5,
-    });
-
-    serviceItems.forEach(item => observer.observe(item));
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active');
 });
