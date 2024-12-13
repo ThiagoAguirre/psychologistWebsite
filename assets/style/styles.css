@@ -16,7 +16,7 @@ body, html {
 /* Cabeçalho */
 .navbar{
     padding: 20px;
-    background-color: var(--principal-cor);
+    background-color: #f4ddc9;
 }
 .navbar .container-fluid .navbar-brand {
     font-size: 28px;
@@ -242,8 +242,9 @@ body, html {
 }
 /* FAQS start */
 .accordion{
-    background-color: #F2D6CE;
-    height: 100vh;
+    background-color: #f4ddc9;
+    ;
+    height: 80vh;
     padding: 50px 80px;
 }
 .accordion .title{
@@ -335,7 +336,15 @@ display: none;
 display: block;
 }
 /* FAQS End*/
-
+.contact{
+    height: 100vh;
+    background: var(--principal-cor);
+}
+.container-contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* Rodapé */
 .footer {
     background-color: #D9B99D;
