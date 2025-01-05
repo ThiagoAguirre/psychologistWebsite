@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Niconne&family=Sixtyfour+Convergence&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Niconne&family=Sixtyfour+Convergence&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 /* Estilo geral */
 body, html {
     margin: 0;
@@ -337,13 +338,55 @@ display: block;
 }
 /* FAQS End*/
 .contact{
-    height: 100vh;
+    height: 78vh;
     background: var(--principal-cor);
+    display: flex;
+    justify-content: center;
 }
-.container-contact{
+.contact-container{
+    background-color: #FBF7F4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    margin: 50px 0px;
+    height: 500px;
+}
+.contact-container h1{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 28px;
+    padding-top: 45px;
+    border-bottom: 1px black solid;
+}
+.contact-container img{
+    width: 70px;
+    margin: 15px 0px;
+}
+.contact .contact-container p{
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.image-Icon img{
+    width: 80px;
+}
+.contact-text h2{
+    width: 200px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    word-wrap: break-word;
 }
 /* Rodapé */
 .footer {
@@ -468,14 +511,13 @@ display: block;
     }
   }
   
+
 @media screen and (max-width: 900px) {
     .navbar .container-fluid .navbar-nav .nav-item a{
         display: flex;
         align-items: center;
         justify-content: center;
     }
-}
-@media screen and (max-width: 900px) {
     .service-container {
         display: flex;
         gap: 40px;
@@ -516,6 +558,12 @@ display: block;
     .navbar .container-fluid {
         padding: 0px 5% 0px 10%;
     }
+}
+@media screen and (max-width: 580px) {
+    .contact-container{
+        width: 400px;
+    }
+
 }
 @media screen and (max-width: 480px) {
     .navbar {
@@ -609,6 +657,9 @@ display: block;
 
     .footer-section p{
         text-align: center;
+    }
+    .contact-container{
+        width: 300px;
     }
         
         
