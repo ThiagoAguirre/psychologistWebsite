@@ -338,10 +338,11 @@ display: block;
 }
 /* FAQS End*/
 .contact{
-    height: 78vh;
+    height: 98vh;
     background: var(--principal-cor);
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .contact-container{
     background-color: #FBF7F4;
@@ -558,10 +559,19 @@ display: block;
     .navbar .container-fluid {
         padding: 0px 5% 0px 10%;
     }
+    .image-box{
+        display: none;
+    }
+    .accordion .accordion-text {
+        width: 90%;
+    }
 }
 @media screen and (max-width: 580px) {
     .contact-container{
         width: 400px;
+    }
+    .accordion {
+        padding: 50px;
     }
 
 }
@@ -660,6 +670,9 @@ display: block;
     }
     .contact-container{
         width: 300px;
+    }
+    .accordion .title {
+        font-size: 22px;
     }
         
         
