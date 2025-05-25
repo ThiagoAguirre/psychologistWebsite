@@ -12,12 +12,12 @@ body, html {
 }
 
 :root {
-    --principal-cor: #F2E7DD;
+    --principal-cor: #f2e7ddbe;
   }
 /* Cabeçalho */
 .navbar{
     padding: 20px;
-    background-color: #f4ddc9;
+    background-color: #f4ddc900;
 }
 .navbar .container-fluid .navbar-brand {
     font-size: 28px;
@@ -50,7 +50,9 @@ body, html {
 
 .hero {
     height: 100vh;
-    background: url('../img/BackGroundBruna.jpeg') no-repeat center center/cover;
+    background-image: url('../img/BackGroundBruna2.webp');
+    background-image: no-repeat;
+    background-size: cover;
     position: relative;
 }
 .hero .overlay {
@@ -59,7 +61,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -168,7 +170,7 @@ body, html {
 .aboutMe{
     display: flex;
     padding: 50px 80px;
-    background: var(--principal-cor);
+    background-color: var(--principal-cor);
 }
 .aboutMe-container{
     display: flex;
@@ -240,6 +242,38 @@ body, html {
 .whatsapp-button img{
     width: 25px;
     height: 25px;
+}
+
+/* Video Section*/
+
+.section-video{
+    padding: 50px 20px;
+    background-color: #f4ddc9;
+    height: 90vh;
+}
+.section-video h2{
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+.video-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-video-bruna{
+    display: none;
+
 }
 /* FAQS start */
 .accordion{
@@ -352,7 +386,7 @@ display: block;
     align-items: center;
     width: 500px;
     margin: 50px 0px;
-    height: 500px;
+    height: 600px;
 }
 .contact-container h1{
     font-family: "Playfair Display", serif;
@@ -381,13 +415,24 @@ display: block;
     width: 80px;
 }
 .contact-text h2{
+    width: 250px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    word-wrap: break-word;
+    text-align: center;
+}
+.contact-text ul li{
     width: 200px;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
+    font-size: 16px;
     word-wrap: break-word;
+
 }
 /* Rodapé */
 .footer {
@@ -482,6 +527,22 @@ display: block;
     width: 20px;
     height: 20px;
 }
+.video-text-container {
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+.video-text{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    text-align: justify;
+    word-break: break-word;
+}
 
 @media screen and (max-width: 1200px) {
     .service-container {
@@ -545,13 +606,18 @@ display: block;
         flex-direction: column;
         align-items: center;
     }
-    .hero{
-        height: 150vh;
-    }
     .service-box {
         width: 400px;
     }
-
+    .hero {
+        background-image: url('../img/teste.webp');
+    }
+    .section-video{
+        height: 100vh;
+    }
+    .video-text-container {
+        width: 400px;
+    }
 }
 
 
@@ -567,11 +633,29 @@ display: block;
     }
 }
 @media screen and (max-width: 580px) {
+    .hero{
+        height: 140vh;
+    }
     .contact-container{
         width: 400px;
     }
     .accordion {
         padding: 50px;
+    }
+    .image-video-bruna{
+        display: contents;
+    }
+    .image-video-bruna img{
+        width: 170px;
+        height: 179px;
+        border-radius: 31%;
+        margin-bottom: 25px;
+    }
+    .section-video{
+        height: 100vh;
+    }
+    .video-text-container {
+        width: 300px;
     }
 
 }
@@ -586,6 +670,9 @@ display: block;
         flex-direction: column;
         gap: 10px;
         text-align: center;
+    }
+    .hero{
+        height: 140vh;
     }
 
     .hero h1 {
@@ -653,11 +740,6 @@ display: block;
         flex-direction: column;
         align-items: center;
     }
-    .hero {
-
-        background: url('../img/BrunaAguirre.jpeg') no-repeat center center/cover;
-
-    }
     .footer-container p{
         text-align: center;
     }
@@ -674,6 +756,67 @@ display: block;
     .accordion .title {
         font-size: 22px;
     }
+    .video-text-container {
+        width: 250px;
+    }
+    
         
         
+}
+
+.wrapper {
+    background: linear-gradient(60deg, #420285, #08bdbd);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.carousel__item {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    padding: 0 12px;
+    opacity: 0;
+    filter: drop-shadow(0 2px 2px #555);
+    will-change: transform, opacity;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.carousel__item-head {
+    border-radius: 50%;
+    background-color: #d7f7fc;
+    width: 90px;
+    height: 90px;
+    padding: 14px;
+    position: relative;
+    margin-right: -45px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.carousel__item-body {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px 20px 16px 70px;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 10px;
 }
